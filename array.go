@@ -51,12 +51,23 @@ func main() {
 	fmt.Println(daySlice2)
 
 	newSlice := make([]string, 2,5)
-	newSlice[0] = "jawa"
-	newSlice[1] = "joko"
+	newSlice[1] = "jawa"
+	newSlice[0] = "joko"
 	// newSlice[2] = "waduh"
 
-	fmt.Println(newSlice)
-	fmt.Println(len(newSlice))
-	fmt.Println(cap(newSlice))
+	nambah := append(newSlice, "lah", "kok", "gua", "mulu", "anjer")
 
+	fmt.Println(newSlice)
+	fmt.Println(nambah)
+
+	fromSlice := days[:]
+	toSlice := make([]string, len(fromSlice), cap(fromSlice))
+
+	copy(toSlice, fromSlice)
+	fmt.Println(fromSlice)
+	fmt.Println(toSlice)
+
+
+	iniArray := [...]int {1,2,3,4,5}
+	iniSlice := []int {1,2,3,4,5}
 }
